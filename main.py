@@ -30,3 +30,15 @@ resources = {
     "coffee": 100,
 }
 
+profit = 0
+machine_on = True
+
+while machine_on:
+    choice = input("What would you like? (espresso/latte/cappuccino)")
+    if choice == "off":
+        machine_on = False
+    elif choice == "report":
+        print(f'Water: {resources["water"]}ml\nMilk: {resources["milk"]}ml\nCoffee: {resources["coffee"]}g\nMoney: ${profit}')
+    else:
+        print(MENU[choice])
+
